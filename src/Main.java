@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         // by default implements abstractFun()
-        FuncInterface fobj =  x->System.out.println(2*x);
+        FuncInterface1 fobj = x->System.out.println(2*x);
 
         // This calls above lambda expression and prints 10.
         fobj.abstractFun(5);
