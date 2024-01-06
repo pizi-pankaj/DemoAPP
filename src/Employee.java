@@ -7,6 +7,7 @@ public class Employee {
     private Double salary;
     private List<String> projects;
 
+
     @Override
     public String toString() {
         return "Employee{" +
