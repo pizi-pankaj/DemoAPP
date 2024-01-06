@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Employee {
+public class Employee2 {
 
   
 }
