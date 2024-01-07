@@ -9,14 +9,27 @@ public class PracticeString {
 
     public static void main(String[] args) {
        // reverse string
-
-
-
+String msg = "HELLO";
+int length = msg.length();
+char[] charMsgArray = msg.toCharArray();
+for (int i = length-1; i>=0; i--)
+{
+    System.out.println(i + " " + (i>=0) + (length-1));
+    //System.out.print(charMsgArray[i]);
+}
+for (int j = msg.length()-1; j>=0; j--)
+{
+    System.out.print(msg.charAt(j));
+}
+StringBuffer sb = new StringBuffer(msg);
+        System.out.print(sb.reverse());
+StringBuilder sbr = new StringBuilder(msg);
+        System.out.print(sbr.reverse());
     }
 }
 
 @FunctionalInterface
-interface FuncInterface
+interface FuncInterface1
 {
     // An abstract function
     void abstractFun(int x);
