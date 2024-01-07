@@ -49,18 +49,57 @@ StringBuilder stringBuilder = new StringBuilder();
         String givenStrForSorting = "rock";
         char unsortedcharArr[] = givenStrForSorting.toCharArray();
         char temp;
-        for(int i = 0 ; i>unsortedcharArr.length; i++)
+        for(int i = 0 ; i<unsortedcharArr.length; i++)
         {
-            for (int k=i+1; k>unsortedcharArr.length; k++)
+            for (int k=i+1; k<unsortedcharArr.length; k++)
+
                 if (unsortedcharArr[i]>unsortedcharArr[k])
                 {
-                     temp = unsortedcharArr[k];
-                    unsortedcharArr[k]=unsortedcharArr[i];
-                    unsortedcharArr[i]=temp;
+                    System.out.println(i +" "+k +" "+unsortedcharArr.length);
+                     temp = unsortedcharArr[i];
+                    unsortedcharArr[i]=unsortedcharArr[k];
+                    unsortedcharArr[k]=temp;
                 }
         }
         System.out.println(Arrays.toString(unsortedcharArr));
+
+//        sortTheStringInAlphabatically(whiteSpaceMessage);
+        sortTheStringInAlphabaticallyCustome(givenStrForSorting);
     }
+static String sortTheStringInAlphabatically(String value)
+{
+    char[]  chArray = value.toCharArray();
+    Arrays.sort(chArray);
+    System.out.println(chArray);
+return chArray.toString();
+}
+    static String sortTheStringInAlphabaticallyCustome(String value)
+    {
+        char[]  chArray = value.toCharArray();
 
+        char temp;
+        for (int i =0; i< chArray.length; i++)
+        {
 
+            for (int j = i+1; j< chArray.length; j++)
+            {    System.out.println(i +" "+j+" "+chArray.length);
+                if(chArray[i]>chArray[j])
+                {
+                    temp = chArray[i];
+                    chArray[i]= chArray[j];
+                    chArray[j]=temp;
+                }
+
+            }
+        }
+        System.out.println(chArray);
+        StringBuilder sb = new StringBuilder();
+        for (Character c: chArray)
+        {
+            sb.append(c);
+
+        }
+        System.out.println(sb);
+        return chArray.toString();
+    }
 }
